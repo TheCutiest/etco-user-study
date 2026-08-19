@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ETCO User Study</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <div class="eyebrow" data-i18n="eyebrow"></div>
+        <h1 data-i18n="title"></h1>
+        <p class="sub" data-i18n="subtitle"></p>
+      </div>
+      <div class="progress-wrap">
+        <button id="langToggle" class="lang-toggle" type="button"></button>
+        <div id="partLabel" class="part-label"></div>
+        <div id="progressText">0 / 0</div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+    </header>
+
+    <section id="welcome" class="panel">
+      <h2 data-i18n="welcomeHeading"></h2>
+      <p data-i18n="welcomeIntro"></p>
+      <div class="notice">
+        <strong data-i18n="notice1Label"></strong>
+        <span data-i18n="notice1Body"></span>
+      </div>
+      <div class="notice">
+        <strong data-i18n="notice2Label"></strong>
+        <span data-i18n="notice2Body"></span>
+      </div>
+      <div class="notice">
+        <strong data-i18n="noticeDimsLabel"></strong>
+        <span data-i18n="noticeDimsBody"></span>
+      </div>
+      <label class="field">
+        <span data-i18n="participantLabel"></span>
+        <input id="participantId" data-i18n-placeholder="participantPlaceholder" />
+      </label>
+      <label class="check">
+        <input id="consent" type="checkbox" />
+        <span data-i18n="consentText"></span>
+      </label>
+      <button id="startBtn" class="primary" data-i18n="startBtn"></button>
+    </section>
+
+    <section id="part1" class="hidden">
+      <div class="prompt-panel">
+        <span class="label" data-i18n="promptLabel"></span>
+        <div id="promptText1" class="prompt"></div>
+      </div>
+
+      <div class="single-grid">
+        <article class="result-card">
+          <div class="card-head"><span data-i18n="resultLabel"></span></div>
+          <div id="media1" class="media"></div>
+        </article>
+      </div>
+
+      <div id="questions1" class="questions"></div>
+
+      <div class="nav">
+        <button id="prevBtn1" class="secondary"></button>
+        <button id="nextBtn1" class="primary"></button>
+      </div>
+    </section>
+
+    <section id="transition" class="panel hidden">
+      <h2 data-i18n="transitionHeading"></h2>
+      <p data-i18n="transitionBody"></p>
+      <button id="continueBtn" class="primary" data-i18n="continueBtn"></button>
+    </section>
+
+    <section id="part2" class="hidden">
+      <div class="prompt-panel">
+        <span class="label" data-i18n="promptLabel"></span>
+        <div id="promptText2" class="prompt"></div>
+      </div>
+
+      <div class="compare-grid">
+        <article class="result-card">
+          <div class="card-head"><span data-i18n="resultALabel"></span><span id="tagA" class="tag"></span></div>
+          <div id="mediaA" class="media"></div>
+        </article>
+        <article class="result-card">
+          <div class="card-head"><span data-i18n="resultBLabel"></span><span id="tagB" class="tag"></span></div>
+          <div id="mediaB" class="media"></div>
+        </article>
+      </div>
+
+      <div id="questions2" class="questions"></div>
+
+      <div class="nav">
+        <button id="prevBtn2" class="secondary"></button>
+        <button id="nextBtn2" class="primary"></button>
+      </div>
+    </section>
+
+    <section id="finish" class="panel hidden">
+      <h2 data-i18n="finishHeading"></h2>
+      <p data-i18n="finishBody"></p>
+      <div class="finish-actions">
+        <button id="downloadBtn" class="primary" data-i18n="downloadBtn"></button>
+        <button id="restartBtn" class="secondary" data-i18n="restartBtn"></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="study_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
